@@ -1,0 +1,62 @@
+name: Alerta CI
+
+# Avisa por Telegram cuando una corrida de este repo termina mal. Copia del
+# alerta-ci.yml de las landings de la familia (ver el de libraclub_web para el
+# porque de cada decision). Sin TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID no falla:
+# deja un warning.
+#
+# OJO: `workflow_run` solo corre si este archivo esta en la rama DEFAULT (main).
+
+on:
+  workflow_run:
+    workflows: ["Deploy a VPS"]
+    types: [completed]
+  workflow_dispatch:
+
+jobs:
+  avisar:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Avisar por Telegram
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ES_PRUEBA: ${{ github.event_name == 'workflow_dispatch' }}
+          REPO: ${{ github.repository }}
+          FLUJO: ${{ github.event.workflow_run.name }}
+          RAMA: ${{ github.event.workflow_run.head_branch }}
+          AUTOR: ${{ github.event.workflow_run.actor.login }}
+          COMMIT: ${{ github.event.workflow_run.head_commit.message }}
+          URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          set -u
+          if [ -z "${TOKEN}" ] || [ -z "${CHAT}" ]; then
+            echo "::warning::Faltan TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID en este repo: no se envio el aviso."
+            exit 0
+          fi
+          if [ "${ES_PRUEBA}" = "true" ]; then
+            TEXTO=$(printf '%s\n\n%s' \
+              "✅ Prueba de alerta desde ${REPO}" \
+              "El canal funciona. Se disparo a mano, no hubo ninguna falla.")
+          else
+            TITULO=$(printf '%s' "${COMMIT}" | head -1 | cut -c1-90)
+            TEXTO=$(printf '%s\n\n%s\n%s\n%s\n%s\n%s\n\n%s' \
+              "🔴 CI en rojo" \
+              "Repo:     ${REPO}" \
+              "Workflow: ${FLUJO}" \
+              "Rama:     ${RAMA}" \
+              "Commit:   ${TITULO}" \
+              "Autor:    ${AUTOR}" \
+              "${URL}")
+          fi
+          if ! respuesta=$(curl -sS --fail-with-body -X POST \
+              "https://api.telegram.org/bot${TOKEN}/sendMessage" \
+              --data-urlencode "chat_id=${CHAT}" \
+              --data-urlencode "text=${TEXTO}" 2>&1); then
+            echo "::error::Telegram rechazo el envio: ${respuesta}"
+            exit 1
+          fi
+          echo "Aviso enviado."

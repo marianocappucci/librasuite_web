@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    image: librasuite-web:latest
+    container_name: librasuite-web
+    restart: unless-stopped
+    ports:
+      - "8104:80"
+    networks:
+      - stack-net
+
+networks:
+  stack-net:
+    external: true
+    name: stack_stack-net

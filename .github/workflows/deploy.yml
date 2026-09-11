@@ -1,0 +1,21 @@
+name: Deploy a VPS
+
+# El mismo reusable workflow que las ocho landings de la familia.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Un deploy por vez; cortar uno a la mitad deja el rsync hecho y el contenedor
+# sin reconstruir (ver el deploy.yml de cualquiera de las landings).
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    uses: marianocappucci/libra-web-kit/.github/workflows/deploy-vps.yml@main
+    with:
+      remote_path: /root/librasuite_web/
+    secrets: inherit
