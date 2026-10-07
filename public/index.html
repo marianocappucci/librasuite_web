@@ -5,350 +5,295 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LibraSuite — Sistemas de gestión para cada tipo de negocio</title>
   <meta name="description" content="LibraSuite es la familia de sistemas de gestión de Compulibra: ContaLibra, RestoLibra, GestioLibra, MedLibra, VentaLibra, LibraDesk, LibraCargo y LibraClub. Un sistema para cada rubro, con la misma forma de trabajar.">
+  <meta name="theme-color" content="#06122a">
   <link rel="icon" type="image/svg+xml" href="/img/mark.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
 
-<!-- ── Navbar ─────────────────────────────────────────────── -->
-<nav class="navbar">
-  <a href="/" class="navbar-brand" style="text-decoration:none">
-    <img src="/img/mark.svg" alt="" class="logo-mark" width="32" height="32">
-    LibraSuite
-  </a>
-  <div class="navbar-links">
-    <a href="#productos">Productos</a>
-    <a href="#rubros">Por rubro</a>
-    <a href="#en-comun">Qué comparten</a>
-    <a href="#nube">Copia en la nube</a>
-    <a href="https://wa.me/5491127752983?text=Hola,%20quiero%20info%20sobre%20LibraSuite" target="_blank" rel="noopener" class="btn-nav">Contactar</a>
+<header class="nav">
+  <div class="wrap">
+    <a href="/" class="brand"><img src="/img/mark.svg" alt="" width="30" height="30">LibraSuite</a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#productos">Productos</a>
+      <a href="#rubros">Por rubro</a>
+      <a href="#motor">El motor</a>
+      <a href="#nube">Copia externa</a>
+      <a href="https://wa.me/5491127752983?text=Hola,%20quiero%20info%20sobre%20LibraSuite" target="_blank" rel="noopener" class="nav-cta">Contactar</a>
+    </nav>
   </div>
-</nav>
+</header>
+
+<main>
 
 <!-- ── Hero ──────────────────────────────────────────────── -->
 <section class="hero">
-  <div class="hero-content">
-    <img src="/img/librasuite-logo.png" alt="LibraSuite" class="hero-logo" width="150" height="150">
-    <div class="hero-badge">Sistemas de gestión para negocios argentinos</div>
-    <h1>Un sistema para cada negocio.<br><span>Una misma forma de trabajar.</span></h1>
-    <p>Ocho sistemas web, cada uno pensado para un rubro, que comparten el mismo motor: tu propia base de datos, respaldo automático, usuarios con roles y el mismo soporte.</p>
-    <a href="#productos" class="btn btn-accent btn-lg"><i class="bi bi-grid-3x3-gap"></i> Ver los productos</a>
-    <a href="https://wa.me/5491127752983?text=Hola,%20quiero%20info%20sobre%20LibraSuite" target="_blank" rel="noopener" class="btn btn-white btn-lg">
-      <i class="bi bi-whatsapp"></i> Contactar por WhatsApp
-    </a>
+  <div class="wrap hero-main">
+    <div>
+      <div class="eyebrow">Sistemas de gestión · Hechos en Argentina</div>
+      <h1>Ocho sistemas.<br><em>Un mismo motor.</em></h1>
+      <p class="lead">Cada producto de LibraSuite está pensado para un rubro, y todos comparten la misma base: tu propia base de datos, respaldo automático, facturación ARCA, usuarios con roles y el mismo soporte.</p>
+      <div class="hero-actions">
+        <a href="#productos" class="btn btn-primary">Ver los productos <i class="bi bi-arrow-down" aria-hidden="true"></i></a>
+        <a href="https://wa.me/5491127752983?text=Hola,%20quiero%20info%20sobre%20LibraSuite" target="_blank" rel="noopener" class="btn btn-ghost"><i class="bi bi-whatsapp" aria-hidden="true"></i> Hablar con nosotros</a>
+      </div>
+    </div>
+    <nav class="suite" aria-label="Los ocho productos">
+        <a href="#contalibra" style="--p:#2563eb;--p-on-dark:#60a5fa"><i class="bi bi-receipt-cutoff" aria-hidden="true"></i><div><strong>ContaLibra</strong><span>Comercios y PyMEs</span></div></a>
+        <a href="#restolibra" style="--p:#ea580c;--p-on-dark:#fb923c"><i class="bi bi-cup-hot" aria-hidden="true"></i><div><strong>RestoLibra</strong><span>Restaurantes, bares y delivery</span></div></a>
+        <a href="#gestiolibra" style="--p:#7c3aed;--p-on-dark:#a78bfa"><i class="bi bi-calendar-check" aria-hidden="true"></i><div><strong>GestioLibra</strong><span>Negocios de servicios</span></div></a>
+        <a href="#medlibra" style="--p:#0d9488;--p-on-dark:#2dd4bf"><i class="bi bi-heart-pulse" aria-hidden="true"></i><div><strong>MedLibra</strong><span>Consultorios y centros médicos</span></div></a>
+        <a href="#ventalibra" style="--p:#d97706;--p-on-dark:#fbbf24"><i class="bi bi-upc-scan" aria-hidden="true"></i><div><strong>VentaLibra</strong><span>Punto de venta para retail</span></div></a>
+        <a href="#libradesk" style="--p:#4f46e5;--p-on-dark:#818cf8"><i class="bi bi-headset" aria-hidden="true"></i><div><strong>LibraDesk</strong><span>Empresas de IT</span></div></a>
+        <a href="#libracargo" style="--p:#012c83;--p-on-dark:#7aa2f7"><i class="bi bi-truck" aria-hidden="true"></i><div><strong>LibraCargo</strong><span>Agencias de cargas</span></div></a>
+        <a href="#libraclub" style="--p:#017b4b;--p-on-dark:#34d399"><i class="bi bi-trophy" aria-hidden="true"></i><div><strong>LibraClub</strong><span>Complejos deportivos</span></div></a>
+    </nav>
+  </div>
+  <div class="facts">
+    <div class="wrap">
+      <div class="fact"><b>8</b><span>sistemas, uno por rubro</span></div>
+      <div class="fact"><b>1</b><span>base de datos propia por cliente</span></div>
+      <div class="fact"><b>24 h</b><span>entre un respaldo y el siguiente</span></div>
+      <div class="fact"><b>0</b><span>instalaciones: funciona en el navegador</span></div>
+    </div>
   </div>
 </section>
 
 <!-- ── Productos ─────────────────────────────────────────── -->
-<section id="productos">
-  <div class="container">
-    <div class="section-label">Los productos</div>
-    <h2 class="section-title">Elegí el que habla el idioma de tu negocio</h2>
-    <p class="section-sub">Cada uno tiene su sitio con todo el detalle y una demo pública para probarlo sin registrarte.</p>
-
-    <div class="products-grid">
-
-      <article class="product-card" id="contalibra" style="--p:#2563eb;--p-light:#eff6ff">
-        <div class="product-head">
-          <div class="product-icon"><i class="bi bi-receipt-cutoff"></i></div>
-          <div>
-            <h3>ContaLibra</h3>
-            <div class="product-badge">Comercios y PyMEs</div>
-          </div>
-        </div>
+<section id="productos" class="section">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow">Los productos</div>
+        <h2>Un sistema que habla el idioma de tu negocio</h2>
+      </div>
+      <p>Cada uno tiene su sitio con todo el detalle y una demo pública para probarlo sin registrarte.</p>
+    </div>
+    <div class="products">
+      <article class="product" id="contalibra" style="--p:#2563eb">
+        <div class="num">01</div>
+        <div><h3><i class="bi bi-receipt-cutoff" aria-hidden="true"></i>ContaLibra</h3><span class="rubro">Comercios y PyMEs</span></div>
         <p>Facturación electrónica ARCA, ventas, caja, stock e inventario. Todo en un sistema simple, sin complicaciones.</p>
-        <div class="product-links">
-          <a href="https://contalibra.com.ar" target="_blank" rel="noopener" class="btn btn-product btn-sm">Conocer ContaLibra</a>
-          <a href="https://demo.contalibra.com.ar/" target="_blank" rel="noopener" class="product-demo"><i class="bi bi-play-circle"></i> Demo</a>
+        <div class="links">
+          <a href="https://demo.contalibra.com.ar/" target="_blank" rel="noopener" class="demo">Probar la demo</a>
+          <a href="https://contalibra.com.ar" target="_blank" rel="noopener" class="site">Conocer ContaLibra <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
         </div>
       </article>
-
-      <article class="product-card" id="restolibra" style="--p:#ea580c;--p-light:#fff7ed">
-        <div class="product-head">
-          <div class="product-icon"><i class="bi bi-cup-hot"></i></div>
-          <div>
-            <h3>RestoLibra</h3>
-            <div class="product-badge">Restaurantes, bares y delivery</div>
-          </div>
-        </div>
+      <article class="product" id="restolibra" style="--p:#ea580c">
+        <div class="num">02</div>
+        <div><h3><i class="bi bi-cup-hot" aria-hidden="true"></i>RestoLibra</h3><span class="rubro">Restaurantes, bares y delivery</span></div>
         <p>Comandas de cocina y barra, mesas y salones, canales de venta, cobro integrado y facturación electrónica ARCA.</p>
-        <div class="product-links">
-          <a href="https://restolibra.com.ar" target="_blank" rel="noopener" class="btn btn-product btn-sm">Conocer RestoLibra</a>
-          <a href="https://demo.restolibra.com.ar/" target="_blank" rel="noopener" class="product-demo"><i class="bi bi-play-circle"></i> Demo</a>
+        <div class="links">
+          <a href="https://demo.restolibra.com.ar/" target="_blank" rel="noopener" class="demo">Probar la demo</a>
+          <a href="https://restolibra.com.ar" target="_blank" rel="noopener" class="site">Conocer RestoLibra <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
         </div>
       </article>
-
-      <article class="product-card" id="gestiolibra" style="--p:#7c3aed;--p-light:#f5f3ff">
-        <div class="product-head">
-          <div class="product-icon"><i class="bi bi-calendar-check"></i></div>
-          <div>
-            <h3>GestioLibra</h3>
-            <div class="product-badge">Negocios de servicios</div>
-          </div>
-        </div>
+      <article class="product" id="gestiolibra" style="--p:#7c3aed">
+        <div class="num">03</div>
+        <div><h3><i class="bi bi-calendar-check" aria-hidden="true"></i>GestioLibra</h3><span class="rubro">Negocios de servicios</span></div>
         <p>Agenda de turnos, recordatorios, señas y facturación electrónica ARCA para barberías, peluquerías, estética, lavaderos y talleres.</p>
-        <div class="product-links">
-          <a href="https://gestiolibra.com.ar" target="_blank" rel="noopener" class="btn btn-product btn-sm">Conocer GestioLibra</a>
-          <a href="https://demo.gestiolibra.com.ar/" target="_blank" rel="noopener" class="product-demo"><i class="bi bi-play-circle"></i> Demo</a>
+        <div class="links">
+          <a href="https://demo.gestiolibra.com.ar/" target="_blank" rel="noopener" class="demo">Probar la demo</a>
+          <a href="https://gestiolibra.com.ar" target="_blank" rel="noopener" class="site">Conocer GestioLibra <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
         </div>
       </article>
-
-      <article class="product-card" id="medlibra" style="--p:#0d9488;--p-light:#f0fdfa">
-        <div class="product-head">
-          <div class="product-icon"><i class="bi bi-heart-pulse"></i></div>
-          <div>
-            <h3>MedLibra</h3>
-            <div class="product-badge">Consultorios y centros médicos</div>
-          </div>
-        </div>
+      <article class="product" id="medlibra" style="--p:#0d9488">
+        <div class="num">04</div>
+        <div><h3><i class="bi bi-heart-pulse" aria-hidden="true"></i>MedLibra</h3><span class="rubro">Consultorios y centros médicos</span></div>
         <p>Agenda de turnos, historia clínica, recetas, estudios, consentimientos y facturación electrónica ARCA.</p>
-        <div class="product-links">
-          <a href="https://medlibra.com.ar" target="_blank" rel="noopener" class="btn btn-product btn-sm">Conocer MedLibra</a>
-          <a href="https://demo.medlibra.com.ar/" target="_blank" rel="noopener" class="product-demo"><i class="bi bi-play-circle"></i> Demo</a>
+        <div class="links">
+          <a href="https://demo.medlibra.com.ar/" target="_blank" rel="noopener" class="demo">Probar la demo</a>
+          <a href="https://medlibra.com.ar" target="_blank" rel="noopener" class="site">Conocer MedLibra <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
         </div>
       </article>
-
-      <article class="product-card" id="ventalibra" style="--p:#d97706;--p-light:#fffbeb">
-        <div class="product-head">
-          <div class="product-icon"><i class="bi bi-upc-scan"></i></div>
-          <div>
-            <h3>VentaLibra</h3>
-            <div class="product-badge">Punto de venta para retail</div>
-          </div>
-        </div>
+      <article class="product" id="ventalibra" style="--p:#d97706">
+        <div class="num">05</div>
+        <div><h3><i class="bi bi-upc-scan" aria-hidden="true"></i>VentaLibra</h3><span class="rubro">Punto de venta para retail</span></div>
         <p>Punto de venta con código de barras, catálogo, variantes, stock, compras y facturación electrónica ARCA para despensas, autoservicios y tiendas de ropa.</p>
-        <div class="product-links">
-          <a href="https://ventalibra.com.ar" target="_blank" rel="noopener" class="btn btn-product btn-sm">Conocer VentaLibra</a>
-          <a href="https://demo.ventalibra.com.ar/" target="_blank" rel="noopener" class="product-demo"><i class="bi bi-play-circle"></i> Demo</a>
+        <div class="links">
+          <a href="https://demo.ventalibra.com.ar/" target="_blank" rel="noopener" class="demo">Probar la demo</a>
+          <a href="https://ventalibra.com.ar" target="_blank" rel="noopener" class="site">Conocer VentaLibra <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
         </div>
       </article>
-
-      <article class="product-card" id="libradesk" style="--p:#4f46e5;--p-light:#eef2ff">
-        <div class="product-head">
-          <div class="product-icon"><i class="bi bi-headset"></i></div>
-          <div>
-            <h3>LibraDesk</h3>
-            <div class="product-badge">Empresas de IT</div>
-          </div>
-        </div>
+      <article class="product" id="libradesk" style="--p:#4f46e5">
+        <div class="num">06</div>
+        <div><h3><i class="bi bi-headset" aria-hidden="true"></i>LibraDesk</h3><span class="rubro">Empresas de IT</span></div>
         <p>Mesa de ayuda, equipos, reparaciones, alquileres, stock y comprobantes. Se conecta con ContaLibra o con SOS Contador para facturar.</p>
-        <div class="product-links">
-          <a href="https://libradesk.com.ar" target="_blank" rel="noopener" class="btn btn-product btn-sm">Conocer LibraDesk</a>
-          <a href="https://demo.libradesk.com.ar/" target="_blank" rel="noopener" class="product-demo"><i class="bi bi-play-circle"></i> Demo</a>
+        <div class="links">
+          <a href="https://demo.libradesk.com.ar/" target="_blank" rel="noopener" class="demo">Probar la demo</a>
+          <a href="https://libradesk.com.ar" target="_blank" rel="noopener" class="site">Conocer LibraDesk <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
         </div>
       </article>
-
-      <article class="product-card" id="libracargo" style="--p:#012c83;--p-light:#eef3fc">
-        <div class="product-head">
-          <div class="product-icon"><i class="bi bi-truck"></i></div>
-          <div>
-            <h3>LibraCargo</h3>
-            <div class="product-badge">Agencias de cargas</div>
-          </div>
-        </div>
+      <article class="product" id="libracargo" style="--p:#012c83">
+        <div class="num">07</div>
+        <div><h3><i class="bi bi-truck" aria-hidden="true"></i>LibraCargo</h3><span class="rubro">Agencias de cargas</span></div>
         <p>Órdenes de carga, fleteros, las tres cuentas corrientes, caja, comprobantes y reportes, para la agencia que intermedia entre el cliente y el transportista.</p>
-        <div class="product-links">
-          <a href="https://libracargo.com.ar" target="_blank" rel="noopener" class="btn btn-product btn-sm">Conocer LibraCargo</a>
-          <a href="https://demo.libracargo.com.ar/" target="_blank" rel="noopener" class="product-demo"><i class="bi bi-play-circle"></i> Demo</a>
+        <div class="links">
+          <a href="https://demo.libracargo.com.ar/" target="_blank" rel="noopener" class="demo">Probar la demo</a>
+          <a href="https://libracargo.com.ar" target="_blank" rel="noopener" class="site">Conocer LibraCargo <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
         </div>
       </article>
-
-      <article class="product-card" id="libraclub" style="--p:#017b4b;--p-light:#ecfdf5">
-        <div class="product-head">
-          <div class="product-icon"><i class="bi bi-trophy"></i></div>
-          <div>
-            <h3>LibraClub</h3>
-            <div class="product-badge">Complejos deportivos</div>
-          </div>
-        </div>
+      <article class="product" id="libraclub" style="--p:#017b4b">
+        <div class="num">08</div>
+        <div><h3><i class="bi bi-trophy" aria-hidden="true"></i>LibraClub</h3><span class="rubro">Complejos deportivos</span></div>
         <p>Canchas, tarifas por franja, agenda semanal, reservas, canchas fijas y bloqueos, para pádel, fútbol, tenis y cualquier espacio que se alquile por hora.</p>
-        <div class="product-links">
-          <a href="https://libraclub.com.ar" target="_blank" rel="noopener" class="btn btn-product btn-sm">Conocer LibraClub</a>
-          <a href="https://demo.libraclub.com.ar/" target="_blank" rel="noopener" class="product-demo"><i class="bi bi-play-circle"></i> Demo</a>
+        <div class="links">
+          <a href="https://demo.libraclub.com.ar/" target="_blank" rel="noopener" class="demo">Probar la demo</a>
+          <a href="https://libraclub.com.ar" target="_blank" rel="noopener" class="site">Conocer LibraClub <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
         </div>
       </article>
-
     </div>
   </div>
 </section>
 
 <!-- ── Por rubro ─────────────────────────────────────────── -->
-<section id="rubros" class="alt">
-  <div class="container" style="text-align:center">
-    <div class="section-label">¿Qué negocio tenés?</div>
-    <h2 class="section-title">Buscalo por rubro</h2>
-    <div class="rubros">
-      <a href="#contalibra" style="--p:#2563eb"><i class="bi bi-shop"></i>Comercio o PyME</a>
-      <a href="#restolibra" style="--p:#ea580c"><i class="bi bi-egg-fried"></i>Restaurante o bar</a>
-      <a href="#restolibra" style="--p:#ea580c"><i class="bi bi-bicycle"></i>Delivery</a>
-      <a href="#gestiolibra" style="--p:#7c3aed"><i class="bi bi-scissors"></i>Peluquería o barbería</a>
-      <a href="#gestiolibra" style="--p:#7c3aed"><i class="bi bi-car-front"></i>Lavadero o taller</a>
-      <a href="#medlibra" style="--p:#0d9488"><i class="bi bi-hospital"></i>Consultorio</a>
-      <a href="#ventalibra" style="--p:#d97706"><i class="bi bi-basket"></i>Despensa o autoservicio</a>
-      <a href="#ventalibra" style="--p:#d97706"><i class="bi bi-bag"></i>Tienda de ropa</a>
-      <a href="#libradesk" style="--p:#4f46e5"><i class="bi bi-pc-display"></i>Soporte técnico</a>
-      <a href="#libracargo" style="--p:#012c83"><i class="bi bi-box-seam"></i>Agencia de cargas</a>
-      <a href="#libraclub" style="--p:#017b4b"><i class="bi bi-dribbble"></i>Complejo de pádel o fútbol</a>
+<section id="rubros" class="section tint">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow">Por rubro</div>
+        <h2>¿Qué negocio tenés?</h2>
+      </div>
+      <p>Buscá tu actividad y te llevamos al sistema que le corresponde.</p>
     </div>
-    <p class="section-sub" style="margin:2rem auto 0">¿No encontrás el tuyo? <a href="https://wa.me/5491127752983?text=Hola,%20tengo%20un%20negocio%20y%20quiero%20saber%20qu%C3%A9%20sistema%20de%20LibraSuite%20me%20sirve" target="_blank" rel="noopener">Contanos qué hacés</a> y te decimos cuál te sirve.</p>
+    <div class="index">
+      <a href="#contalibra" style="--p:#2563eb"><span><i class="bi bi-shop" aria-hidden="true"></i>Comercio o PyME</span><small>ContaLibra</small></a>
+      <a href="#restolibra" style="--p:#ea580c"><span><i class="bi bi-egg-fried" aria-hidden="true"></i>Restaurante o bar</span><small>RestoLibra</small></a>
+      <a href="#restolibra" style="--p:#ea580c"><span><i class="bi bi-bicycle" aria-hidden="true"></i>Delivery</span><small>RestoLibra</small></a>
+      <a href="#gestiolibra" style="--p:#7c3aed"><span><i class="bi bi-scissors" aria-hidden="true"></i>Peluquería o barbería</span><small>GestioLibra</small></a>
+      <a href="#gestiolibra" style="--p:#7c3aed"><span><i class="bi bi-car-front" aria-hidden="true"></i>Lavadero o taller</span><small>GestioLibra</small></a>
+      <a href="#medlibra" style="--p:#0d9488"><span><i class="bi bi-hospital" aria-hidden="true"></i>Consultorio</span><small>MedLibra</small></a>
+      <a href="#ventalibra" style="--p:#d97706"><span><i class="bi bi-basket" aria-hidden="true"></i>Despensa o autoservicio</span><small>VentaLibra</small></a>
+      <a href="#ventalibra" style="--p:#d97706"><span><i class="bi bi-bag" aria-hidden="true"></i>Tienda de ropa</span><small>VentaLibra</small></a>
+      <a href="#libradesk" style="--p:#4f46e5"><span><i class="bi bi-pc-display" aria-hidden="true"></i>Soporte técnico</span><small>LibraDesk</small></a>
+      <a href="#libracargo" style="--p:#012c83"><span><i class="bi bi-box-seam" aria-hidden="true"></i>Agencia de cargas</span><small>LibraCargo</small></a>
+      <a href="#libraclub" style="--p:#017b4b"><span><i class="bi bi-dribbble" aria-hidden="true"></i>Complejo de pádel o fútbol</span><small>LibraClub</small></a>
+    </div>
+    <p class="note">¿No encontrás el tuyo? <a href="https://wa.me/5491127752983?text=Hola,%20tengo%20un%20negocio%20y%20quiero%20saber%20qu%C3%A9%20sistema%20de%20LibraSuite%20me%20sirve" target="_blank" rel="noopener">Contanos qué hacés</a> y te decimos cuál te sirve.</p>
   </div>
 </section>
 
-<!-- ── En común ──────────────────────────────────────────── -->
-<section id="en-comun">
-  <div class="container">
-    <div class="section-label">Qué comparten</div>
-    <h2 class="section-title">Distinto rubro, el mismo motor</h2>
-    <p class="section-sub">Lo que se construye una vez llega a los ocho. Y lo que se arregla, también.</p>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon"><i class="bi bi-database-lock"></i></div>
-        <h3>Tu propia base de datos</h3>
-        <p>Cada cliente tiene su instancia y su base aislada. Tus datos no comparten tabla con nadie, y son tuyos: te los podés llevar cuando quieras.</p>
+<!-- ── El mismo motor ────────────────────────────────────── -->
+<section id="motor" class="section dark">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow">Qué comparten</div>
+        <h2>Distinto rubro, el mismo motor</h2>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="bi bi-cloud-check"></i></div>
-        <h3>Respaldo automático</h3>
-        <p>Una copia completa todas las noches, que se prueba restaurándola. Y, si querés, una copia más en tu propio Google Drive o Dropbox.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="bi bi-receipt"></i></div>
-        <h3>Factura electrónica ARCA</h3>
-        <p>En los productos que facturan, el comprobante sale directo de ARCA con tu certificado y tu punto de venta.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="bi bi-people"></i></div>
-        <h3>Usuarios y roles</h3>
-        <p>Quien atiende no toca los precios; quien administra, sí. Cada persona entra con su usuario.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="bi bi-clock-history"></i></div>
-        <h3>Registro de actividad</h3>
-        <p>Quién cambió qué y cuándo, y quién entró al sistema. No se puede editar ni borrar, ni siendo administrador.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="bi bi-globe2"></i></div>
-        <h3>Sin instalaciones</h3>
-        <p>Funciona en el navegador, desde la PC del mostrador, la notebook o el celular. Las actualizaciones llegan solas.</p>
-      </div>
+      <p>Lo que se construye una vez llega a los ocho. Y lo que se arregla, también.</p>
+    </div>
+    <div class="features">
+      <div class="feature"><i class="bi bi-database-lock" aria-hidden="true"></i><h3>Tu propia base de datos</h3><p>Cada cliente tiene su instancia y su base aislada. Tus datos no comparten tabla con nadie, y son tuyos: te los podés llevar cuando quieras.</p></div>
+      <div class="feature"><i class="bi bi-cloud-check" aria-hidden="true"></i><h3>Respaldo automático</h3><p>Una copia completa todas las noches, que se prueba restaurándola. Y, si querés, una copia más en tu propio Google Drive o Dropbox.</p></div>
+      <div class="feature"><i class="bi bi-receipt" aria-hidden="true"></i><h3>Factura electrónica ARCA</h3><p>En los productos que facturan, el comprobante sale directo de ARCA con tu certificado y tu punto de venta.</p></div>
+      <div class="feature"><i class="bi bi-people" aria-hidden="true"></i><h3>Usuarios y roles</h3><p>Quien atiende no toca los precios; quien administra, sí. Cada persona entra con su usuario.</p></div>
+      <div class="feature"><i class="bi bi-clock-history" aria-hidden="true"></i><h3>Registro de actividad</h3><p>Quién cambió qué y cuándo, y quién entró al sistema. No se puede editar ni borrar, ni siendo administrador.</p></div>
+      <div class="feature"><i class="bi bi-globe2" aria-hidden="true"></i><h3>Sin instalaciones</h3><p>Funciona en el navegador, desde la PC del mostrador, la notebook o el celular. Las actualizaciones llegan solas.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ── Copia externa en la nube ──────────────────────────── -->
-<section id="nube" class="alt">
-  <div class="container">
-    <div class="section-label">Copia externa</div>
-    <h2 class="section-title">Una copia de tus respaldos en tu propia nube</h2>
-    <p class="section-sub">Con la función opcional <strong>Copia externa</strong>, el administrador conecta su cuenta de Google Drive o de Dropbox desde <em>Configuración → Datos / Backup</em>, con un botón, y el sistema guarda ahí una copia de cada respaldo.</p>
-
-    <div class="nube-grid">
-      <div class="nube-card">
-        <h3><i class="bi bi-google"></i> Google Drive</h3>
-        <p>Se pide el permiso <code>drive.file</code>: el sistema <strong>sólo ve los archivos que él mismo crea</strong>. No puede ver, abrir ni modificar nada más de tu Drive.</p>
+<section id="nube" class="section tint">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow">Copia externa</div>
+        <h2>Una copia de tus respaldos en tu propia nube</h2>
       </div>
-      <div class="nube-card">
-        <h3><i class="bi bi-dropbox"></i> Dropbox</h3>
-        <p>Se usa una carpeta de aplicación: el sistema sólo ve <em>Aplicaciones/…</em>, no el resto de tu Dropbox.</p>
-      </div>
-      <div class="nube-card">
-        <h3><i class="bi bi-shield-check"></i> Para qué, y nada más</h3>
-        <p>Subir las copias de tu instancia, comprobar que llegaron completas y borrar las viejas que el mismo sistema subió. Del perfil sólo se lee el correo, para mostrarte qué cuenta quedó conectada. No se usa para publicidad ni se comparte con nadie.</p>
-      </div>
+      <p>Con la función opcional <strong>Copia externa</strong>, el administrador conecta su cuenta de Google Drive o de Dropbox desde <em>Configuración → Datos / Backup</em>, con un botón, y el sistema guarda ahí una copia de cada respaldo.</p>
     </div>
-    <p class="section-sub" style="margin-top:1.5rem">Podés desconectarla cuando quieras desde la misma pantalla. El detalle está en la <a href="/legal/privacidad">Política de Privacidad</a>.</p>
+    <div class="cloud">
+      <article><h3><i class="bi bi-google" aria-hidden="true"></i> Google Drive</h3><p>Se pide el permiso <code>drive.file</code>: el sistema <strong>sólo ve los archivos que él mismo crea</strong>. No puede ver, abrir ni modificar nada más de tu Drive.</p></article>
+      <article><h3><i class="bi bi-dropbox" aria-hidden="true"></i> Dropbox</h3><p>Se usa una carpeta de aplicación: el sistema sólo ve <em>Aplicaciones/…</em>, no el resto de tu Dropbox.</p></article>
+      <article><h3><i class="bi bi-shield-check" aria-hidden="true"></i> Para qué, y nada más</h3><p>Subir las copias de tu instancia, comprobar que llegaron completas y borrar las viejas que el mismo sistema subió. Del perfil sólo se lee el correo, para mostrarte qué cuenta quedó conectada. No se usa para publicidad ni se comparte con nadie.</p></article>
+    </div>
+    <p class="note">Podés desconectarla cuando quieras desde la misma pantalla. El detalle está en la <a href="/legal/privacidad">Política de Privacidad</a>.</p>
   </div>
 </section>
 
 <!-- ── Cómo empezar ──────────────────────────────────────── -->
-<section>
-  <div class="container">
-    <div class="section-label">Así de simple</div>
-    <h2 class="section-title">Cómo empezar</h2>
+<section class="section">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow">Cómo empezar</div>
+        <h2>De la demo a tu sistema, en tres pasos</h2>
+      </div>
+      <p>Te acompañamos desde la elección hasta la puesta en marcha.</p>
+    </div>
     <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Elegís el producto</h3>
-        <p>El de tu rubro. Si dudás entre dos, te ayudamos a decidir.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Probás la demo</h3>
-        <p>Cada producto tiene una demo pública, con datos de ejemplo, sin registrarte.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Te armamos tu instancia</h3>
-        <p>Con tu dominio, tu base de datos propia y tus usuarios. Te acompañamos en la puesta en marcha.</p>
-      </div>
+      <div class="step"><h3>Elegís el producto</h3><p>El de tu rubro. Si dudás entre dos, te ayudamos a decidir.</p></div>
+      <div class="step"><h3>Probás la demo</h3><p>Cada producto tiene una demo pública, con datos de ejemplo, sin registrarte.</p></div>
+      <div class="step"><h3>Te armamos tu instancia</h3><p>Con tu dominio, tu base de datos propia y tus usuarios. Te acompañamos en la puesta en marcha.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ── CTA final ──────────────────────────────────────────── -->
-<section class="cta-section">
-  <h2>¿Cuál es el de tu negocio?</h2>
-  <p>Escribinos y te lo mostramos funcionando. Sin instalaciones, sin complicaciones.</p>
-  <a href="https://wa.me/5491127752983?text=Hola,%20quiero%20info%20sobre%20LibraSuite" target="_blank" rel="noopener" class="btn btn-white btn-lg">
-    <i class="bi bi-whatsapp"></i> Contactar por WhatsApp
-  </a>
-</section>
-
-<!-- ── Footer ─────────────────────────────────────────────── -->
-<footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand">
-        <img src="/img/mark.svg" alt="" width="28" height="28">
-        LibraSuite
-      </div>
-      <div class="footer-tagline">Sistemas de gestión para cada tipo de negocio</div>
-      <div class="footer-tagline">Una marca de Compulibra</div>
-    </div>
-    <div class="footer-cols">
-      <div>
-        <div class="footer-title">Productos</div>
-        <div class="footer-links">
-          <a href="https://contalibra.com.ar" target="_blank" rel="noopener">ContaLibra</a>
-          <a href="https://restolibra.com.ar" target="_blank" rel="noopener">RestoLibra</a>
-          <a href="https://gestiolibra.com.ar" target="_blank" rel="noopener">GestioLibra</a>
-          <a href="https://medlibra.com.ar" target="_blank" rel="noopener">MedLibra</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-title">&nbsp;</div>
-        <div class="footer-links">
-          <a href="https://ventalibra.com.ar" target="_blank" rel="noopener">VentaLibra</a>
-          <a href="https://libradesk.com.ar" target="_blank" rel="noopener">LibraDesk</a>
-          <a href="https://libracargo.com.ar" target="_blank" rel="noopener">LibraCargo</a>
-          <a href="https://libraclub.com.ar" target="_blank" rel="noopener">LibraClub</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-title">Legal</div>
-        <div class="footer-links">
-          <a href="/legal/privacidad">Política de Privacidad</a>
-          <a href="/legal/condiciones">Condiciones del Servicio</a>
-          <a href="/legal/terminos">Términos y Condiciones</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-title">Contacto</div>
-        <div class="footer-links">
-          <a href="https://wa.me/5491127752983" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-          <a href="mailto:info@compulibra.com.ar"><i class="bi bi-envelope"></i> info@compulibra.com.ar</a>
-        </div>
-      </div>
+<!-- ── Cierre ────────────────────────────────────────────── -->
+<section class="closing">
+  <div class="wrap">
+    <h2>¿Cuál es el de tu negocio?</h2>
+    <p>Escribinos y te lo mostramos funcionando. Sin instalaciones, sin complicaciones.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/5491127752983?text=Hola,%20quiero%20info%20sobre%20LibraSuite" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-whatsapp" aria-hidden="true"></i> Contactar por WhatsApp</a>
+      <a href="mailto:info@compulibra.com.ar" class="btn btn-ghost"><i class="bi bi-envelope" aria-hidden="true"></i> info@compulibra.com.ar</a>
     </div>
   </div>
-  <div class="footer-copy">
-    © 2026 LibraSuite · Compulibra, de Mariano Cappucci · Suipacha, Buenos Aires
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="/" class="brand"><img src="/img/mark.svg" alt="" width="30" height="30">LibraSuite</a>
+        <p>Sistemas de gestión para cada tipo de negocio.</p>
+        <p>Una marca de Compulibra.</p>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul>
+            <li><a href="https://contalibra.com.ar" target="_blank" rel="noopener">ContaLibra</a></li>
+            <li><a href="https://restolibra.com.ar" target="_blank" rel="noopener">RestoLibra</a></li>
+            <li><a href="https://gestiolibra.com.ar" target="_blank" rel="noopener">GestioLibra</a></li>
+            <li><a href="https://medlibra.com.ar" target="_blank" rel="noopener">MedLibra</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>&nbsp;</h4>
+        <ul>
+            <li><a href="https://ventalibra.com.ar" target="_blank" rel="noopener">VentaLibra</a></li>
+            <li><a href="https://libradesk.com.ar" target="_blank" rel="noopener">LibraDesk</a></li>
+            <li><a href="https://libracargo.com.ar" target="_blank" rel="noopener">LibraCargo</a></li>
+            <li><a href="https://libraclub.com.ar" target="_blank" rel="noopener">LibraClub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/legal/privacidad">Política de Privacidad</a></li>
+          <li><a href="/legal/condiciones">Condiciones del Servicio</a></li>
+          <li><a href="/legal/terminos">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/5491127752983" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+          <li><a href="mailto:info@compulibra.com.ar"><i class="bi bi-envelope" aria-hidden="true"></i> info@compulibra.com.ar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-copy">© 2026 LibraSuite · Compulibra, de Mariano Cappucci · Suipacha, Buenos Aires</div>
   </div>
 </footer>
 
