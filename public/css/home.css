@@ -277,7 +277,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .index { grid-template-columns: 1fr; }
   .features, .cloud, .steps { grid-template-columns: 1fr; }
   .steps { gap: 2rem; }
-  .foot-grid { grid-template-columns: repeat(2, 1fr); }
+  .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .foot-grid > :last-child { grid-column: 1 / -1; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
