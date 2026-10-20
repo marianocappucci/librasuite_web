@@ -207,21 +207,6 @@ section[id] { scroll-margin-top: 72px; }
 .feature h3 { margin: 1.25rem 0 .5rem; font-family: var(--display); font-size: 1.15rem; font-weight: 600; color: #fff; letter-spacing: -.01em; }
 .feature p { margin: 0; font-size: .95rem; color: var(--on-dark-muted); }
 
-/* ── LibraEdge: descargas ─────────────────────────────────── */
-.descargas { margin-top: 2.5rem; padding: 2rem; border: 1px solid var(--line-dark); border-radius: 12px; background: rgba(255,255,255,.03); }
-.descargas-titulo { display: flex; align-items: center; gap: .6rem; margin: 0 0 1.5rem; font-family: var(--display); font-size: 1.15rem; font-weight: 600; color: #fff; }
-.descargas-titulo i { color: var(--accent); }
-.descargas-grilla { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.descargas-grilla article { display: flex; flex-direction: column; align-items: flex-start; gap: .85rem; padding: 1.5rem; border: 1px solid var(--line-dark); border-top: 3px solid var(--p); border-radius: 10px; background: rgba(255,255,255,.04); }
-.descargas-grilla h3 { margin: 0; font-family: var(--display); font-size: 1.05rem; font-weight: 600; color: #fff; }
-.descargas-grilla .btn { display: inline-flex; align-items: center; gap: .5rem; }
-.descargas-nota { margin: 1.25rem 0 0; font-size: .9rem; color: var(--on-dark-muted); }
-.descargas-nota strong { color: var(--on-dark); }
-.descargas-grilla .btn-ghost { font-size: .92rem; }
-.descargas-comando { margin: .75rem 0 0; padding: .9rem 1rem; overflow-x: auto; border: 1px solid var(--line-dark); border-radius: 8px; background: rgba(0,0,0,.25); }
-.descargas-comando code { background: transparent; padding: 0; border: 0; border-radius: 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .82rem; color: var(--on-dark); white-space: pre; }
-.descargas-nota a { color: var(--accent); font-weight: 600; border-bottom: 1px solid currentColor; }
-
 /* ── Copia externa ────────────────────────────────────────── */
 .cloud { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .cloud article { padding: 2rem; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; }
@@ -291,8 +276,6 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .product .links { white-space: normal; }
   .index { grid-template-columns: 1fr; }
   .features, .cloud, .steps { grid-template-columns: 1fr; }
-  .descargas-grilla { grid-template-columns: 1fr; }
-  .descargas { padding: 1.25rem; }
   .steps { gap: 2rem; }
   .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .foot-grid > :last-child { grid-column: 1 / -1; }
