@@ -217,6 +217,9 @@ section[id] { scroll-margin-top: 72px; }
 .descargas-grilla .btn { display: inline-flex; align-items: center; gap: .5rem; }
 .descargas-nota { margin: 1.25rem 0 0; font-size: .9rem; color: var(--on-dark-muted); }
 .descargas-nota strong { color: var(--on-dark); }
+.descargas-grilla .btn-ghost { font-size: .92rem; }
+.descargas-comando { margin: .75rem 0 0; padding: .9rem 1rem; overflow-x: auto; border: 1px solid var(--line-dark); border-radius: 8px; background: rgba(0,0,0,.25); }
+.descargas-comando code { background: transparent; padding: 0; border: 0; border-radius: 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .82rem; color: var(--on-dark); white-space: pre; }
 .descargas-nota a { color: var(--accent); font-weight: 600; border-bottom: 1px solid currentColor; }
 
 /* ── Copia externa ────────────────────────────────────────── */
