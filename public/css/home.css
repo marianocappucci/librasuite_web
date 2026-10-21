@@ -123,6 +123,10 @@ section[id] { scroll-margin-top: 72px; }
 .suite img { width: 36px; height: 36px; border-radius: 9px; }
 .suite strong { display: block; color: #fff; font-family: var(--display); font-weight: 600; font-size: 1.02rem; letter-spacing: -.01em; }
 .suite span { font-size: .78rem; color: var(--on-dark-muted); }
+/* LibraBot no es uno de los ocho sistemas: va abajo, a todo el ancho, y lleva a su sección. */
+.suite a.extra { grid-column: 1 / -1; min-height: 0; flex-direction: row; align-items: center; gap: .9rem; }
+.suite a.extra div { flex: 1; }
+.suite a.extra .bi { color: var(--on-dark-muted); }
 
 /* Franja de cifras */
 .facts { position: relative; border-top: 1px solid var(--line-dark); }
