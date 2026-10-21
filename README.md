@@ -1,11 +1,11 @@
 # librasuite_web
 
 Sitio de **LibraSuite** (`librasuite.com.ar`): la familia de sistemas de gestión de
-Compulibra. Presenta los ocho productos y publica las páginas legales comunes.
+Compulibra. Presenta los nueve productos y publica las páginas legales comunes.
 
 | Ruta | Qué es |
 |---|---|
-| `/` | Los ocho productos, por rubro, lo que comparten y la Copia externa |
+| `/` | Los nueve productos, por rubro, lo que comparten y la Copia externa |
 | `/legal/privacidad` | Política de Privacidad (incluye el Uso Limitado de las API de Google) |
 | `/legal/condiciones` | Condiciones del Servicio: remite a los Términos y agrega lo de la Copia externa |
 | `/legal/terminos` | Términos y Condiciones del Servicio v1.0, el texto único de la familia |
