@@ -104,9 +104,9 @@ section[id] { scroll-margin-top: 72px; }
 .hero .lead { font-size: 1.15rem; color: var(--on-dark-muted); max-width: 34rem; margin: 0 0 2.4rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 
-/* Mosaico de los ocho productos */
+/* Mosaico de los nueve productos */
 .suite {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
   background: var(--line-dark); border: 1px solid var(--line-dark); border-radius: 14px; overflow: hidden;
 }
 .suite a {
@@ -123,10 +123,6 @@ section[id] { scroll-margin-top: 72px; }
 .suite img { width: 36px; height: 36px; border-radius: 9px; }
 .suite strong { display: block; color: #fff; font-family: var(--display); font-weight: 600; font-size: 1.02rem; letter-spacing: -.01em; }
 .suite span { font-size: .78rem; color: var(--on-dark-muted); }
-/* LibraBot no es uno de los ocho sistemas: va abajo, a todo el ancho, y lleva a su sección. */
-.suite a.extra { grid-column: 1 / -1; min-height: 0; flex-direction: row; align-items: center; gap: .9rem; }
-.suite a.extra div { flex: 1; }
-.suite a.extra .bi { color: var(--on-dark-muted); }
 
 /* Franja de cifras */
 .facts { position: relative; border-top: 1px solid var(--line-dark); }
@@ -255,7 +251,6 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .hero-main { grid-template-columns: 1fr; gap: 3rem; padding-top: 4.5rem; }
-  .suite { grid-template-columns: repeat(4, 1fr); }
   .product { grid-template-columns: 3rem minmax(0, 1fr) auto; }
   .product p { grid-column: 2 / -1; grid-row: 2; }
   .features { grid-template-columns: repeat(2, 1fr); }
@@ -268,6 +263,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .hero-main { padding-top: 3.5rem; padding-bottom: 3.5rem; }
   .suite { grid-template-columns: repeat(2, 1fr); }
   .suite a { min-height: 96px; }
+  .suite a:last-child { grid-column: 1 / -1; } /* nueve: el último cierra la grilla de dos columnas */
   .facts .wrap { grid-template-columns: repeat(2, 1fr); }
   .fact, .fact + .fact { padding: 1.4rem 1rem 1.5rem 0; border-left: 0; }
   .fact:nth-child(even) { padding-left: 1rem; border-left: 1px solid var(--line-dark); }
